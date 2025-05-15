@@ -2,9 +2,7 @@ import requests
 
 
 def test_new_tasks():
-    body = {
-        "title": "generated-ALLA",
-        "completed": True}
+    body = {"title": "generated-ALLA", "completed": True}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
     response_body = response.json()
     id = response.json()["id"]
